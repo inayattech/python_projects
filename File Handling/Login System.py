@@ -11,6 +11,7 @@ class User:
 class Authsystem:
     def __init__(self):
         self.file_name = "users.txt" 
+        self.attempts = {}
 
    
     def load_user(self):
@@ -56,25 +57,27 @@ class Authsystem:
     def login(self,username,password):
         users = self.load_user()
         found_user = None
+        if username not in self.attempts:
+            self.attempts[username] = 0
+
         for user in users:
             if user.username == username:
                 found_user = user
         if found_user:        
-            counter = 0 
-            while counter < 3:
+            while True:
+                if self.attempts[username] >= 3:
+                    print("Account Locked")
+                    break
                 hash_pass = self.hash_password(password)
                 if found_user.check_password(hash_pass):
-                    print("login succssful")
+                    print("Login Successful")
+                    self.attempts[username] = 0
                     return
                 else:
-                    counter += 1
-                    if counter < 3:
-                        print("total 3 attempt")
-                        password = getpass.getpass("Try Again:")
-                        print("Remaining Attempt",3-counter)
-                    else:
-                        print("Limit Reached")
-                        return
+                    self.attempts[username] += 1 
+                    password = getpass.getpass("Enter Your Password: ")
+                       
+
         else:
             print("user not found")          
                     
@@ -85,4 +88,4 @@ auth = Authsystem()
 auth.register("inayat","1234")
 #auth.register("ali",1122)
 
-auth.login("inayat","1234")
+auth.login("inayat","124")
