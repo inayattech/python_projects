@@ -1,0 +1,10 @@
+🔐 
+password hide (****)
+🔒 
+simple encryption (file me plain text na ho)
+🚫 
+max login attempts permanently lock
+🗑 
+delete user
+🔁 
+password change system
