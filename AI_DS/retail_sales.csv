@@ -1,0 +1,16 @@
+Customer_ID,Product,Category,Region,Quantity,Price,Payment_Method
+C001,T-Shirt,Clothing,Karachi,2,1200,Cash
+C002,Jeans,Clothing,Lahore,1,3500,Card
+C003,Mobile,Electronics,Islamabad,1,45000,Card
+C004,Shoes,Footwear,Karachi,2,5000,Cash
+C005,Laptop,Electronics,Lahore,1,85000,Card
+C006,Watch,Accessories,Islamabad,3,2500,Cash
+C007,Bag,Accessories,Karachi,1,3000,Card
+C008,Headphones,Electronics,Lahore,2,4000,Cash
+C009,Sandals,Footwear,Islamabad,2,2000,Cash
+C010,Jacket,Clothing,Karachi,1,6000,Card
+C011,Tablet,Electronics,Lahore,1,30000,Card
+C012,Belt,Accessories,Islamabad,2,1500,Cash
+C013,Sneakers,Footwear,Karachi,1,5500,Card
+C014,Shirt,Clothing,Lahore,3,1800,Cash
+C015,Camera,Electronics,Islamabad,1,65000,Card

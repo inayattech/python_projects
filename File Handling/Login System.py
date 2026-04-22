@@ -63,11 +63,12 @@ class Authsystem:
         for user in users:
             if user.username == username:
                 found_user = user
+                break
         if found_user:        
             while True:
                 if self.attempts[username] >= 3:
                     print("Account Locked")
-                    break
+                    return
                 hash_pass = self.hash_password(password)
                 if found_user.check_password(hash_pass):
                     print("Login Successful")
